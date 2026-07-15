@@ -1,5 +1,4 @@
 import random
-
 number_to_guess= random.randint(1,100)
 
 while True:
@@ -14,6 +13,7 @@ while True:
 
         else:
             print("Congrtulations! You guessed the number.")
-
+            break
+        
     except ValueError:
             print("Please enter a valid number.")
