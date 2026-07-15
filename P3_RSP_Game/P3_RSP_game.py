@@ -7,7 +7,7 @@ choices = ("r","s","p")
 def get_user_choice():
     """Prompt and validate player input."""
     while True:
-        user_choice = input("Choose Rock, Scissor or Paper? (r/p/s): ").lower()
+        user_choice = input("\nChoose Rock, Scissor or Paper? (r/p/s): ").lower()
         if user_choice in choices:
             return user_choice
         else:
@@ -37,7 +37,7 @@ def determine_winner(user_choice,computer_choice):
 def ask_to_continue():
     """Prompt player to continue or exit."""
     while True:
-        should_continue= input("Continue? (y/n): ").lower()
+        should_continue= input("\nContinue? (y/n): ").lower()
         if should_continue in ["y", "n"]:
             return should_continue 
         else:
