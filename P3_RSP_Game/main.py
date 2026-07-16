@@ -1,8 +1,12 @@
 """Rock-Scissors-Paper game: Player vs Computer."""
 import random
 
-emojis = {"r" : "🪨", "s": "✂️", "p": "📜"}
-choices = ("r","s","p")
+ROCK = "r"
+PAPER = "p"
+SCISSORS = "s"
+
+emojis = {ROCK : "🪨", SCISSORS: "✂️", PAPER: "📜"}
+choices = tuple(emojis.keys())
 
 def get_user_choice():
     """Prompt and validate player input."""
@@ -26,9 +30,9 @@ def determine_winner(user_choice,computer_choice):
         print("Draw! ⚖️")
 
     elif (
-        (user_choice== "r" and computer_choice == "s") or
-        (user_choice == "s" and computer_choice == "p") or 
-        (user_choice == "p" and computer_choice == "r")):
+        (user_choice== ROCK and computer_choice == SCISSORS) or
+        (user_choice == SCISSORS and computer_choice == PAPER) or 
+        (user_choice == PAPER and computer_choice == ROCK)):
         print("You win! 🏆")
 
     else:
